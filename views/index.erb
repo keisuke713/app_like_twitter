@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="top">All Posts</h1>
+  <div class="all-posts">
+    <% @posts.each do |post| %>
+      <div class="post">
+        <p>
+          投稿ID
+          <%= post.id %>
+        </p>
+        <p>
+          タイトル
+          <%= post.title %>
+        </p>
+        <p>本文</p>
+        <div class="body">
+          <%= post.body %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
