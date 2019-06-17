@@ -1,13 +1,19 @@
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   max-width: 500px;
-  background-color: #c0c0c0;
+  background-color: #FFFFFF;
 }
 
 .post, .body {
+  max-width: 400px;
+  margin: auto;
   padding: 0.5em 1em;
   margin: 2em 0;
   font-weight: bold;
   border: solid 3px #000000;
+}
+
+.link {
+  display: inline;
 }
