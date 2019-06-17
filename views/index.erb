@@ -13,9 +13,19 @@
         </p>
         <p>本文</p>
         <div class="body">
-          <%= post.body %>
+          <%= str_slice(post.body) %>
+          <a href="/posts/<%= post.id %>">続きを読む</a>
         </div>
       </div>
+    <% end %>
+  </div>
+  <div class="link">
+    <% (1..total_page).each do |page_num| %>
+      <% if page_num == @page_num %>
+        <p class="link"><%= page_num %></p>
+      <% else %>
+        <a href="/posts/page/<%= page_num %>"><%= page_num %></a>
+      <% end %>
     <% end %>
   </div>
 </div>
