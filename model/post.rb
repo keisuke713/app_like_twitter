@@ -1,7 +1,8 @@
 class Post < ActiveRecord::Base
-  def self.get_post(id)
-    page_num = id - 1
-    skip_posts = page_num * 5
-    limit(5).offset(skip_posts)
+  validates :title, presence: true
+  validates :body,  presence: true
+
+  def self.get_index_data
+    all.order("updated_at DESC, id DESC")
   end
 end
