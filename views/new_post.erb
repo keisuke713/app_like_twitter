@@ -1,0 +1,19 @@
+<h1>Create Post</h1>
+<div class="form">
+  <% if @post.errors.any? %>
+    <% @post.errors.full_messages.uniq.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+  <% end %>
+  <form action="/posts/create" method="post">
+    <div class="input">
+      <label for="title">タイトル</label>
+      <input type="text" id="title" name="title">
+    </div>
+    <div class="input">
+      <label for="body" id="body">本文</label>
+      <textarea name="body" rows="10" cols="40"></textarea><br>
+    </div>
+    <input type="submit" value="投稿" id="submit">
+  </form>
+</div>
