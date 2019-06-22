@@ -1,0 +1,5 @@
+<% unless locals[:value].error_msg.nil? %>
+  <% locals[:value].error_msg.each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+<% end %>

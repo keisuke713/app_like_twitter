@@ -10,6 +10,10 @@
         タイトル
         <%= post.title %>
       </p>
+      <p>
+        投稿者
+        <%# <%= User.find(post.user_id).name %> %>
+      </p>
       <p>本文</p>
       <div class="body">
         <%= str_slice(post.body) %>

@@ -1,10 +1,6 @@
 <h1>Create Post</h1>
 <div class="form">
-  <% if @post.errors.any? %>
-    <% @post.errors.full_messages.uniq.each do |error| %>
-      <p><%= error %></p>
-    <% end %>
-  <% end %>
+  <%= erb :'error', :locals => {:value => @post} %>
   <form action="/posts/create" method="post">
     <div class="input">
       <label for="title">タイトル</label>
