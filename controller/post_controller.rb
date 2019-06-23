@@ -45,3 +45,8 @@ post '/posts/:id/update' do
   @post.update(title: params[:title], body: params[:body])
   redirect '/posts/page/1'
 end
+
+get '/posts/:id/destroy' do
+  Post.find(params[:id]).destroy
+  redirect '/posts/page/1'
+end

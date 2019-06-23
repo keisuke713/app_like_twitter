@@ -24,7 +24,7 @@
     <div>
       <% if current_user == User.find(@post.user_id) %>
         <a href="/posts/<%= @post.id %>/edit">編集</a>
-        <a href="">削除</a>
+        <a href="/posts/<%= @post.id%>/destroy">削除</a>
       <% else %>
         <a href="">コメント</a>
       <% end %>
