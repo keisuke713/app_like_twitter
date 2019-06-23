@@ -12,12 +12,12 @@
       </p>
       <p>
         投稿者
-        <%# <%= User.find(post.user_id).name %> %>
+        <%= name(post.user_id) %>
       </p>
       <p>本文</p>
       <div class="body">
         <%= str_slice(post.body) %>
-        <a href="/posts/<%= post.id %>">続きを読む</a>
+        <a href="/posts/<%= post.id %>">詳細を見る</a>
       </div>
     </div>
   <% end %>

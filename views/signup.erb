@@ -1,8 +1,8 @@
 <h1>Signup</h1>
 <div class="form">
-  <%= erb :'error', :locals => {:value => @user} %>
+  <%= erb :'error', locals: {object: @user} %>
   <form action="/signup" method="post">
-    <%= erb :'form_layout'%>
+    <%= erb :'form_user_layout'%>
     <div class="login">
       <input type="submit" value="signup" id="signup">
     </div>

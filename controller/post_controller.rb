@@ -29,3 +29,19 @@ post '/posts/create' do
   @post.insert_data(params[:title], params[:body], session[:user_id])
   redirect '/posts/page/1'
 end
+
+get '/posts/:id/edit' do
+  @title = 'edit_post'
+  @post = Post.find(params[:id])
+  erb :edit_post
+end
+
+post '/posts/:id/update' do
+  @post = Post.find(params[:id])
+  @post.check_form(params[:title], params[:body])
+
+  return erb :edit_post if @post.error_msg.size > 0
+
+  @post.update(title: params[:title], body: params[:body])
+  redirect '/posts/page/1'
+end

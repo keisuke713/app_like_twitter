@@ -9,9 +9,25 @@
       タイトル
       <%= @post.title %>
     </p>
+    <p>
+      投稿者
+      <%= name(@post.user_id) %>
+    </p>
     <p>本文</p>
     <div class="body">
       <%= @post.body %>
+    </div>
+    <p>
+      最終更新日時
+      <%= @post.updated_at %>
+    </p>
+    <div>
+      <% if current_user == User.find(@post.user_id) %>
+        <a href="/posts/<%= @post.id %>/edit">編集</a>
+        <a href="">削除</a>
+      <% else %>
+        <a href="">コメント</a>
+      <% end %>
     </div>
   </div>
 </div>

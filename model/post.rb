@@ -16,6 +16,6 @@ class Post < ActiveRecord::Base
   end
 
   def self.get_index_data
-    all.order("updated_at DESC, id DESC")
+    Post.all.order("updated_at DESC, id DESC")
   end
 end

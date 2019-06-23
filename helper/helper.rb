@@ -25,12 +25,15 @@ module ModelHelper
     User.find_by(id: user_id)
   end
 
-  def log_in?
-    current_user.nil?
+  def name(user_id)
+    User.find(user_id).name
   end
 end
 
 module LoginHelper
+  def log_in?
+    current_user.nil?
+  end
 end
 
 helpers ViewHelper, ModelHelper, LoginHelper

@@ -1,8 +1,8 @@
 <h1>Login</h1>
 <div class="form">
-  <%= erb :'error', :locals => {:value => @user} %>
+  <%= erb :'error', locals: {object: @user} %>
   <form action="/login" method="post">
-    <%= erb :'form_layout'%>
+    <%= erb :'form_user_layout'%>
     <div class="login">
       <input type="submit" value="login" id="login">
       <a href="/signup" id="signup">新規登録はこちら</a>

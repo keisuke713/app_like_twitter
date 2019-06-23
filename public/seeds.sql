@@ -21,7 +21,7 @@ create table users (
 insert into posts(title,body,user_id) values ('post1', 'これはtwitterを見本に作成したアプリケーションです。
 好きなことをみんなで投稿しましょう。',1);
 insert into posts(title,body,user_id) values ('post2', 'これはtwitterを見本に作成したアプリケーションです。
-好きなことをみんなで投稿しましょう。',1);
+好きなことをみんなで投稿しましょう。',2);
 insert into posts(title,body,user_id) values ('post3', 'これはtwitterを見本に作成したアプリケーションです。
 好きなことをみんなで投稿しましょう。',1);
 insert into posts(title,body,user_id) values ('post4', 'これはtwitterを見本に作成したアプリケーションです。

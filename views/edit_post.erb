@@ -1,0 +1,8 @@
+<h1>EditPost</h1>
+<div class="form">
+  <%= erb :'error', locals: {object: @post} %>
+  <form action="/posts/<%= @post.id %>/update" method="post">
+    <%= erb :'form_post_layout', locals: {title: @post.title, body: @post.body} %>
+    <input type="submit" value="編集" id="submit">
+  </form>
+</div>
